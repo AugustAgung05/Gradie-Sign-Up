@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Assets/Background.png) no-repeat;
+    background-size: cover;
+    background-position: center;  
+  }
+.container {
+    display: flex;
+    width: 1000px;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.container .left-side {
+    position: relative;
+    min-height: 580px;
+    width: 70%;
+    background-color: #003142;
+    border-radius: 10px 0 0 10px;
+}
+.container .left-side h1 {
+    text-align: center;
+    color: #F0F3FB;
+    margin: 35px 0 10px;
+    font-size: 36px;
+}
+.container .left-side p{
+    text-align: center;
+    color: #F0F3FB;
+    opacity: 0.6;
+}
+.container .left-side img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    object-fit: contain;
+    object-position: center;
+}
+.container .right-side {
+    background-color: #FEFEFE;
+    min-height: 580px;
+    width: 70%;
+    border-radius: 0 10px 10px 0;
+    padding: 0 50px 0;
+}
+.container .right-side h1{
+    color: #252525;
+    margin: 35px 0 35px;
+    font-size: 36px;
+}
+.container .right-side .input-user label{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+}
+.container .right-side .input-user{
+    width: 100%;
+    margin: 20px 0 0;
+    border-radius: 5px;
+}
+.container .right-side .input-user input{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #25252581;
+    border-radius: 5px;
+    margin: 10px 0;
+    outline: none;
+}
+.container .right-side .input-user input::placeholder{
+    color: #a0a0a0;
+    font-size: 18px;
+}
+
+.container .right-side .terms-conditions{
+    margin: 15px 0 70px;
+    position: relative;
+}
+.container .right-side .terms-conditions input{
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #25252581;
+    border-radius: 5px;
+}
+.container .right-side .terms-conditions input:checked{
+    background-color: #003142;
+}
+.container .right-side .terms-conditions input:checked::before{
+    content: "\2713";
+    font-size: 20px;
+    color: #FEFEFE;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+}
+.container .right-side .terms-conditions label{
+    position: absolute;
+    cursor: pointer;
+    margin-left: 30px;
+    display: block;
+    top: 0;
+    font-size: 18px;
+}
+.container .right-side .terms-conditions a{
+    text-decoration: none;
+    border-bottom: 3px solid #003142 ;
+    color: #003142;
+    font-weight: 600;
+}
+.container .right-side .btn{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #003142;
+    color: #FEFEFE;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+    
+    .container{
+        flex-direction: column;
+        width: 600px;
+        margin: 100px auto;
+    }
+    .container .left-side{
+        border-radius: 0;
+    }
+    .container .right-side{
+        border-radius: 0 0 10px 10px;
+    }
+    .container .right-side .terms-conditions{
+        margin: 15px 0 85px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background: none;
+    }
+    .container{
+        flex-direction: column;
+        margin: 0;
+    }
+    .container .left-side{
+        border-radius: 0;
+        width: 100%;
+    }   
+    .container .left-side h1, .container .right-side h1{
+        font-size: 40px;
+    }
+    .container .left-side img{
+        height: 100%;
+    }
+    .container .left-side p, .container .right-side .input-user label, .container .right-side .terms-conditions {
+        font-size: 20px;
+    }
+    .container .right-side{
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+    }
+    .container .right-side .input-user{
+        margin: 15px 0 20px;
+    }
+    .container .right-side .input-user input{
+        padding: 25px;
+    }
+}
+@media screen and (max-width : 470px) {
+    .container .left-side {
+        padding: 15px 15px 0;
+    }
+    .container .left-side p, .container .right-side .input-user input::placeholder , .container .right-side .terms-conditions {
+        font-size: 16px;
+    }   
+    .container .left-side img{
+        height: auto;
+        left: 0;
+    }
+    .container .right-side {
+        padding: 0 20px 0;
+    }
+}
